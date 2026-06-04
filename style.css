@@ -1106,3 +1106,68 @@ img, video {
     text-align: center;
   }
 }
+
+@media (max-width: 576px) {
+  .team-card-wrapper {
+    padding: 24px;
+  }
+
+  .meta-item {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .meta-item strong {
+    min-width: auto;
+  }
+  
+  .showroom-wrapper {
+    padding: 16px;
+  }
+  
+  .horizontal-poster-card {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-fpt {
+    height: 30px;
+  }
+  
+  .logo-competition {
+    height: 26px;
+  }
+  
+  .hero-title {
+    font-size: 32px;
+  }
+  
+  .hero-subtitle {
+    font-size: 18px;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+  
+  .hero-buttons .btn {
+    width: 100%;
+  }
+
+  .section-title {
+    font-size: 26px;
+  }
+  
+  .lightbox {
+    padding: 20px;
+  }
+  
+  .lightbox-close {
+    top: 16px;
+    right: 20px;
+    font-size: 36px;
+  }
+}
