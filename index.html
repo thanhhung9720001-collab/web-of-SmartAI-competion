@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GlobalBridge AI — Hệ thống Phiên dịch Thời gian thực Offline</title>
+  <!-- Google Fonts: Outfit for titles, Inter for body -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <!-- Thanh điều hướng (Navbar) -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logos">
+        <img src="./images/logo_fpt.png" alt="FPT Polytechnic Logo" class="logo-fpt">
+        <span class="logo-divider"></span>
+        <img src="./images/competion_logo.png" alt="Competition Logo" class="logo-competition">
+      </div>
+      <ul class="nav-links">
+        <li><a href="#about">Giới thiệu</a></li>
+        <li><a href="#problem">Thách thức</a></li>
+        <li><a href="#features">Tính năng</a></li>
+        <li><a href="#demos">Video Demo</a></li>
+        <li><a href="#gallery">Thư viện</a></li>
+        <li><a href="#team">Đội ngũ</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="#demos" class="btn btn-primary btn-sm">Xem Demo</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero-section" id="about">
+    <div class="hero-bg-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+    </div>
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="project-tag">DỰ ÁN ĐẠT GIẢI CÔNG NGHỆ 2026</div>
+        <h1 class="hero-title">GlobalBridge AI</h1>
+        <p class="hero-subtitle">Real-time Streaming Translation & ASR Pipeline</p>
+        <p class="hero-description">
+          Giải pháp đột phá giúp nhận dạng giọng nói và phiên dịch trực tiếp song hành thời gian thực. Chạy <strong>100% Offline / Local</strong>, bảo mật dữ liệu tuyệt đối và không phát sinh bất kỳ chi phí API đám mây nào.
+        </p>
+        <div class="hero-badges">
+          <span class="badge"><span class="badge-dot dot-green"></span>100% Offline Local</span>
+          <span class="badge"><span class="badge-dot dot-orange"></span>Dual-Layer ASR</span>
+          <span class="badge"><span class="badge-dot dot-blue"></span>Qwen 2.5 LLM Correction</span>
+        </div>
+        <div class="hero-buttons">
+          <a href="#demos" class="btn btn-primary">Xem Demo Thực Tế</a>
+          <a href="#features" class="btn btn-secondary">Khám Phá Công Nghệ</a>
+        </div>
+      </div>
+      <div class="hero-preview">
+        <div class="poster-card-wrapper">
+          <img src="./images/poster_kho_doc.png" alt="GlobalBridge AI Poster" class="hero-poster-preview lightbox-trigger" data-target="./images/poster_kho_doc.png">
+          <div class="poster-hint">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            <span>Click để phóng to Poster dự án</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Problem Statement Section (Thách thức dịch thuật cổ điển) -->
+  <section class="section section-gray" id="problem">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Bối Cảnh Đề Tài</span>
+        <h2 class="section-title">Thách Thức Từ Dịch Thuật Truyền Thống</h2>
+        <div class="section-bar"></div>
+        <p class="section-subtitle">
+          Rào cản ngôn ngữ trong giao tiếp trực tiếp đòi hỏi sự tức thời và chính xác, điều mà các công cụ dịch thuật cổ điển khó có thể đáp ứng trọn vẹn.
+        </p>
+      </div>
+
+      <div class="problem-wrapper">
+        <div class="problem-info">
+          <div class="problem-card">
+            <div class="problem-num">01</div>
+            <h3>Mất kết nối ngữ cảnh (Lost in Translation)</h3>
+            <p>Dịch từng từ riêng lẻ mà không hiểu sắc thái và bối cảnh toàn câu dẫn đến những hiểu lầm hài hước hoặc nghiêm trọng trong giao tiếp.</p>
+          </div>
+          <div class="problem-card">
+            <div class="problem-num">02</div>
+            <h3>Độ trễ quá lớn</h3>
+            <p>Người dùng phải nói xong, chờ máy tải lên đám mây, xử lý và dịch lại. Sự ngắt quãng này phá vỡ nhịp điệu tự nhiên của một cuộc đối thoại.</p>
+          </div>
+          <div class="problem-card">
+            <div class="problem-num">03</div>
+            <h3>Phụ thuộc Internet & Chi Phí API Cao</h3>
+            <p>Các giải pháp STT hiện nay (như Deepgram, Google Cloud) đòi hỏi đường truyền mạng liên tục và ngốn chi phí bản quyền khổng lồ khi mở rộng quy mô sử dụng.</p>
+          </div>
+        </div>
+        <div class="problem-video">
+          <div class="video-container-card">
+            <div class="video-card-header">
+              <span class="video-dot dot-red"></span>
+              <span class="video-dot dot-yellow"></span>
+              <span class="video-dot dot-green"></span>
+              <span class="video-title">Minh Họa: Rào Cản Khi Dịch Sai Ngữ Cảnh</span>
+            </div>
+            <video class="video-player" controls preload="metadata" poster="./images/Gemini_Generated_Image_.png">
+              <source src="./videos/Lost-In-Translation.mp4" type="video/mp4">
+              Trình duyệt của bạn không hỗ trợ phát video này.
+            </video>
+            <div class="video-caption">
+              Trích đoạn phim kinh điển <em>"Lost In Translation"</em> thể hiện sự bất đồng ngôn ngữ và sự hụt hẫng khi người dịch lược bỏ toàn bộ thông tin ngữ cảnh quan trọng của người nói.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Features Section (Giải pháp công nghệ) -->
+  <section class="section" id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Giải Pháp Công Nghệ</span>
+        <h2 class="section-title">Hệ Thống Đột Phá 4 Lớp Chạy Offline</h2>
+        <div class="section-bar"></div>
+        <p class="section-subtitle">
+          Sự kết hợp hoàn hảo giữa các mô hình AI tiên tiến chạy local tạo nên một quy trình dịch thuật mượt mà và tối ưu nhất.
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon icon-blue">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="22"></line></svg>
+          </div>
+          <h3>Nhận diện hai lớp (Dual-Layer STT)</h3>
+          <p>Sử dụng <strong>Sherpa-ONNX 30M</strong> để hiển thị từ ngay khi nói (&lt;100ms) và <strong>PhoWhisper Large</strong> kiểm tra chỉnh sửa lại câu khi người dùng dừng nói.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon icon-orange">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 8 6 6 6-6"></path><path d="m4 14 6 6 8-8"></path></svg>
+          </div>
+          <h3>Sửa Lỗi Chính Tả LLM</h3>
+          <p>Tích hợp mô hình ngôn ngữ lớn <strong>Qwen2.5-1.5B-Instruct</strong> để tự động sửa các lỗi phát âm sai hoặc từ đồng âm khác nghĩa dựa trên ngữ cảnh toàn bộ câu nói.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon icon-green">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21 16-4 4-4-4"></path><path d="M17 20V4"></path><path d="m3 8 4-4 4 4"></path><path d="M7 4v16"></path></svg>
+          </div>
+          <h3>Dịch Kép MarianMT + NLLB</h3>
+          <p>Bản dịch tạm thời cập nhật siêu tốc bởi <strong>MarianMT</strong>, trong khi bản dịch chính thức được tinh chỉnh bởi mô hình <strong>NLLB-200</strong> của Meta kết hợp bộ nhớ đệm LRU.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon icon-purple">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+          </div>
+          <h3>100% Offline & Lọc Nhiễu Mic</h3>
+          <p>Lọc các âm thanh tạp âm, tiếng quạt gió bằng Web Audio API tại client. Toàn bộ mô hình chạy offline bảo mật, bảo vệ sự riêng tư tuyệt đối cho người dùng.</p>
+        </div>
+      </div>
+
+      <div class="architecture-diagram-card">
+        <h3>Sơ đồ hoạt động của Pipeline</h3>
+        <div class="diagram-flow">
+          <div class="flow-step">
+            <div class="step-num">1</div>
+            <h4>Ghi âm (Client)</h4>
+            <p>AudioWorklet lọc 80Hz HPF & truyền 16kHz Int16</p>
+          </div>
+          <div class="flow-arrow">➔</div>
+          <div class="flow-step">
+            <div class="step-num">2</div>
+            <h4>VAD & Sherpa STT</h4>
+            <p>Silero VAD chia đoạn âm, Sherpa dịch interim cực nhanh</p>
+          </div>
+          <div class="flow-arrow">➔</div>
+          <div class="flow-step">
+            <div class="step-num">3</div>
+            <h4>PhoWhisper & Qwen2.5</h4>
+            <p>Hiệu chỉnh chính tả, sửa lỗi đồng âm theo văn cảnh</p>
+          </div>
+          <div class="flow-arrow">➔</div>
+          <div class="flow-step">
+            <div class="step-num">4</div>
+            <h4>Dịch thuật & Hiển thị</h4>
+            <p>Dịch NLLB và render Word-Diff lên web mượt mà</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Showroom Section (Nơi gắn 3 clip demo) -->
+  <section class="section section-gray" id="demos">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Trải Nghiệm Thực Tế</span>
+        <h2 class="section-title">Video Minh Họa Hoạt Động</h2>
+        <div class="section-bar"></div>
+        <p class="section-subtitle">
+          Theo dõi các đoạn ghi hình thực tế quá trình chạy thử nghiệm các tính năng của hệ thống GlobalBridge AI.
+        </p>
+      </div>
+
+      <div class="showroom-tabs">
+        <button class="tab-btn active" data-target="demo1">🎙 Demo 01: Dịch Giọng Nói</button>
+        <button class="tab-btn" data-target="demo2">🖥 Demo 02: Dịch Google Meet</button>
+        <button class="tab-btn" data-target="demo3">⚙ Demo 03: Chống Nhiễu & Sửa Lỗi</button>
+      </div>
+
+      <div class="showroom-content">
+        <!-- Video 1 -->
+        <div class="tab-pane active" id="demo1">
+          <div class="showroom-wrapper">
+            <div class="showroom-video">
+              <video class="video-player" controls preload="metadata" poster="./images/Gemini_Generated_Image_ (1).png">
+                <source src="./videos/Demo-project01.mp4" type="video/mp4">
+                Trình duyệt không hỗ trợ phát video này.
+              </video>
+            </div>
+            <div class="showroom-info">
+              <h3>Demo 01: Nhận Diện Và Dịch Trực Tiếp</h3>
+              <p class="showroom-desc">
+                Trình diễn khả năng tiếp nhận giọng nói tiếng Việt trực tiếp từ microphone, chuyển đổi âm thanh thành văn bản thời gian thực thông qua mô hình Sherpa-ONNX và dịch song song sang tiếng Anh.
+              </p>
+              <ul class="showroom-features">
+                <li><strong class="text-orange">Hiển thị tức thì:</strong> Chữ xuất hiện &lt;100ms sau khi phát âm.</li>
+                <li><strong class="text-blue">Bản dịch mượt mà:</strong> Sử dụng MarianMT cho các từ interim.</li>
+                <li><strong class="text-green">Hiệu ứng pop-in:</strong> Các từ mới chuyển động dịu mắt.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video 2 -->
+        <div class="tab-pane" id="demo2">
+          <div class="showroom-wrapper">
+            <div class="showroom-video">
+              <video class="video-player" controls preload="metadata" poster="./images/Gemini_Generated_Image_ (2).png">
+                <source src="./videos/Demo-project02.mp4" type="video/mp4">
+                Trình duyệt không hỗ trợ phát video này.
+              </video>
+            </div>
+            <div class="showroom-info">
+              <h3>Demo 02: Thu Âm Hệ Thống (Tab Audio)</h3>
+              <p class="showroom-desc">
+                Tính năng chụp luồng âm thanh trực tiếp từ một tab trình duyệt (như Google Meet, Microsoft Teams, hoặc video YouTube). Cho phép người dùng học tập và họp trực tuyến xuyên biên giới dễ dàng.
+              </p>
+              <ul class="showroom-features">
+                <li><strong class="text-orange">Không bị vọng âm:</strong> Bắt âm trực tiếp từ luồng phát của tab.</li>
+                <li><strong class="text-blue">Tự động cân bằng âm lượng:</strong> AGC bảo toàn giọng nói rõ nét.</li>
+                <li><strong class="text-green">Tính năng lý tưởng:</strong> Dùng cho hội nghị, webinar, học ngoại ngữ.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video 3 -->
+        <div class="tab-pane" id="demo3">
+          <div class="showroom-wrapper">
+            <div class="showroom-video">
+              <video class="video-player" controls preload="metadata" poster="./images/Gemini_Generated_Image_ (3).png">
+                <source src="./videos/Demo-project03.mp4" type="video/mp4">
+                Trình duyệt không hỗ trợ phát video này.
+              </video>
+            </div>
+            <div class="showroom-info">
+              <h3>Demo 03: Chống Nhiễu Âm & Sửa Lỗi Chính Tả</h3>
+              <p class="showroom-desc">
+                Trình diễn sức mạnh của mô hình sửa lỗi chính tả Qwen2.5-1.5B-Instruct và bộ lọc tiếng ồn BiquadFilter ở client. Hệ thống tự động phát hiện các từ nói ngọng, đồng âm sai ngữ cảnh và sửa lại chính xác.
+              </p>
+              <ul class="showroom-features">
+                <li><strong class="text-orange">Lọc tạp âm vật lý:</strong> Loại bỏ hum, ù gió dưới 80Hz.</li>
+                <li><strong class="text-blue">Trí tuệ văn cảnh:</strong> Thay thế từ ASR nhận diện sai ("trân thành" -> "chân thành").</li>
+                <li><strong class="text-green">Fail-safe:</strong> Tự khôi phục văn bản gốc nếu LLM bị quá tải.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section (Thư viện hình ảnh & Poster) -->
+  <section class="section" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Tài Nguyên Dự Án</span>
+        <h2 class="section-title">Thư Viện Ảnh & Poster Đề Án</h2>
+        <div class="section-bar"></div>
+        <p class="section-subtitle">
+          Tổng hợp hình ảnh Poster chính thức của dự án và các hình ảnh ý tưởng hệ thống do AI sinh ra.
+        </p>
+      </div>
+
+      <div class="gallery-wrapper">
+        <!-- Cột Poster -->
+        <div class="gallery-poster-column">
+          <div class="poster-card">
+            <h3>Poster Đứng Dự Án</h3>
+            <div class="poster-img-container">
+              <img src="./images/poster_kho_doc.png" alt="Poster Khổ Dọc" class="lightbox-trigger" data-target="./images/poster_kho_doc.png">
+              <div class="zoom-overlay">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                <span>Click để xem ảnh lớn</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cột concept grid -->
+        <div class="gallery-grid-column">
+          <h3>Hình Ảnh Ý Tưởng & Thiết Kế Giao Diện</h3>
+          <div class="images-grid">
+            <div class="grid-item">
+              <img src="./images/Gemini_Generated_Image_.png" alt="Concept 1" class="lightbox-trigger" data-target="./images/Gemini_Generated_Image_.png">
+              <div class="item-overlay"><span>Xem ảnh</span></div>
+            </div>
+            <div class="grid-item">
+              <img src="./images/Gemini_Generated_Image_ (1).png" alt="Concept 2" class="lightbox-trigger" data-target="./images/Gemini_Generated_Image_ (1).png">
+              <div class="item-overlay"><span>Xem ảnh</span></div>
+            </div>
+            <div class="grid-item">
+              <img src="./images/Gemini_Generated_Image_ (2).png" alt="Concept 3" class="lightbox-trigger" data-target="./images/Gemini_Generated_Image_ (2).png">
+              <div class="item-overlay"><span>Xem ảnh</span></div>
+            </div>
+            <div class="grid-item">
+              <img src="./images/Gemini_Generated_Image_ (3).png" alt="Concept 4" class="lightbox-trigger" data-target="./images/Gemini_Generated_Image_ (3).png">
+              <div class="item-overlay"><span>Xem ảnh</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section (Đội ngũ phát triển) -->
+  <section class="section section-gray" id="team">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Đội Dự Án</span>
+        <h2 class="section-title">Đội Ngũ Phát Triển</h2>
+        <div class="section-bar"></div>
+        <p class="section-subtitle">
+          Những gương mặt sinh viên nghiên cứu và xây dựng giải pháp GlobalBridge AI tại FPT Polytechnic.
+        </p>
+      </div>
+
+      <div class="team-card-wrapper">
+        <div class="team-image-pane">
+          <img src="./images/Member-image.jpg" alt="Team Members" class="team-photo lightbox-trigger" data-target="./images/Member-image.jpg">
+          <div class="photo-caption">Đội ngũ phát triển dự án tại buổi bảo vệ ý tưởng</div>
+        </div>
+        <div class="team-info-pane">
+          <span class="team-school">Trường Cao đẳng FPT Polytechnic</span>
+          <h3>Dự án: GlobalBridge AI</h3>
+          <p>
+            Được hình thành từ khát vọng giải quyết bài toán giao tiếp không giới hạn mà không lệ thuộc vào internet hay chi phí hạ tầng lớn. Tập thể đội ngũ đã nỗ lực cấu hình, tối ưu hóa các mô hình học máy nhỏ gọn (Sherpa, PhoWhisper, MarianMT, Qwen) để chạy mượt mà ngay trên các máy tính cấu hình phổ thông của người dùng.
+          </p>
+          <div class="team-meta">
+            <div class="meta-item">
+              <strong>Thành viên đề tài:</strong>
+              <span>Sinh viên khối ngành Công nghệ thông tin - FPT Polytechnic</span>
+            </div>
+            <div class="meta-item">
+              <strong>Cố vấn chuyên môn:</strong>
+              <span>Giảng viên bộ môn Công nghệ thông tin</span>
+            </div>
+            <div class="meta-item">
+              <strong>Công nghệ cốt lõi:</strong>
+              <span>PyTorch, faster-whisper, sherpa-onnx, FastAPI, Web Audio API</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3>GlobalBridge AI</h3>
+          <p>Real-time Translation Pipeline for local execution.</p>
+        </div>
+        <div class="footer-logos">
+          <img src="./images/logo_fpt.png" alt="FPT Logo" class="footer-logo">
+          <img src="./images/competion_logo.png" alt="Competition Logo" class="footer-logo">
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Dự án GlobalBridge AI - SmartAI. Phát triển bởi Sinh viên FPT Polytechnic.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal (Phóng to ảnh) -->
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-close" id="lightbox-close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img" src="" alt="Zoomed view">
+    <div class="lightbox-caption" id="lightbox-caption"></div>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
