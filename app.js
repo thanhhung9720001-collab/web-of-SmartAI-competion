@@ -14,41 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
   handleScroll();
 
 
-  // --- SHOWROOM TABS CONTROLLER ---
-  const tabBtns = document.querySelectorAll('.tab-btn');
-  const tabPanes = document.querySelectorAll('.tab-pane');
-  const allVideoPlayers = document.querySelectorAll('.video-player');
-
-  // Helper to pause all videos
-  const pauseAllVideos = () => {
-    allVideoPlayers.forEach(video => {
-      video.pause();
-    });
-  };
-
-  tabBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const targetId = btn.getAttribute('data-target');
-      
-      // Update active button
-      tabBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-
-      // Pause all running videos when switching tabs
-      pauseAllVideos();
-
-      // Show target tab pane, hide others
-      tabPanes.forEach(pane => {
-        if (pane.id === targetId) {
-          pane.classList.add('active');
-        } else {
-          pane.classList.remove('active');
-        }
-      });
-    });
-  });
-
-
   // --- LIGHTBOX IMAGE MODAL ---
   const lightbox = document.getElementById('lightbox');
   const lightboxImg = document.getElementById('lightbox-img');

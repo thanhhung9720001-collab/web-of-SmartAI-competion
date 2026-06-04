@@ -239,7 +239,7 @@
     </div>
   </section>
 
-  <!-- Video Showroom Section (Nơi gắn 3 clip demo) -->
+  <!-- Video Showroom Section (Nơi gắn clip demo) -->
   <section class="section section-gray" id="demos">
     <div class="container">
       <div class="section-header">
@@ -247,88 +247,29 @@
         <h2 class="section-title">Video Minh Họa Hoạt Động</h2>
         <div class="section-bar"></div>
         <p class="section-subtitle">
-          Theo dõi các đoạn ghi hình thực tế quá trình chạy thử nghiệm các tính năng của hệ thống GlobalBridge AI.
+          Theo dõi đoạn ghi hình thực tế quá trình chạy thử nghiệm đầy đủ các tính năng của hệ thống GlobalBridge AI.
         </p>
       </div>
 
-      <div class="showroom-tabs">
-        <button class="tab-btn active" data-target="demo1">🎙 Demo 01: Dịch Giọng Nói</button>
-        <button class="tab-btn" data-target="demo2">🖥 Demo 02: Dịch Google Meet</button>
-        <button class="tab-btn" data-target="demo3">⚙ Demo 03: Chống Nhiễu & Sửa Lỗi</button>
-      </div>
-
-      <div class="showroom-content">
-        <!-- Video 1 -->
-        <div class="tab-pane active" id="demo1">
-          <div class="showroom-wrapper">
-            <div class="showroom-video">
-              <video class="video-player" controls preload="metadata" poster="./images/Gemini_Generated_Image_ (1).png">
-                <source src="./videos/Demo-project01.mp4" type="video/mp4">
-                Trình duyệt không hỗ trợ phát video này.
-              </video>
-            </div>
-            <div class="showroom-info">
-              <h3>Demo 01: Nhận Diện Và Dịch Trực Tiếp</h3>
-              <p class="showroom-desc">
-                Trình diễn khả năng tiếp nhận giọng nói tiếng Việt trực tiếp từ microphone, chuyển đổi âm thanh thành
-                văn bản thời gian thực thông qua mô hình Sherpa-ONNX và dịch song song sang tiếng Anh.
-              </p>
-              <ul class="showroom-features">
-                <li><strong class="text-orange">Hiển thị tức thì:</strong> Chữ xuất hiện &lt;100ms sau khi phát âm.</li>
-                <li><strong class="text-blue">Bản dịch mượt mà:</strong> Sử dụng MarianMT cho các từ interim.</li>
-                <li><strong class="text-green">Hiệu ứng pop-in:</strong> Các từ mới chuyển động dịu mắt.</li>
-              </ul>
-            </div>
+      <div class="single-video-wrapper">
+        <div class="video-container-card">
+          <div class="video-card-header">
+            <span class="video-dot dot-red"></span>
+            <span class="video-dot dot-yellow"></span>
+            <span class="video-dot dot-green"></span>
+            <span class="video-title">Demo Thực Tế: Hệ Thống Phiên Dịch GlobalBridge AI</span>
           </div>
-        </div>
-
-        <!-- Video 2 -->
-        <div class="tab-pane" id="demo2">
-          <div class="showroom-wrapper">
-            <div class="showroom-video">
-              <video class="video-player" controls preload="metadata" poster="./images/Gemini_Generated_Image_ (2).png">
-                <source src="./videos/Demo-project02.mp4" type="video/mp4">
-                Trình duyệt không hỗ trợ phát video này.
-              </video>
-            </div>
-            <div class="showroom-info">
-              <h3>Demo 02: Thu Âm Hệ Thống (Tab Audio)</h3>
-              <p class="showroom-desc">
-                Tính năng chụp luồng âm thanh trực tiếp từ một tab trình duyệt (như Google Meet, Microsoft Teams, hoặc
-                video YouTube). Cho phép người dùng học tập và họp trực tuyến xuyên biên giới dễ dàng.
-              </p>
-              <ul class="showroom-features">
-                <li><strong class="text-orange">Không bị vọng âm:</strong> Bắt âm trực tiếp từ luồng phát của tab.</li>
-                <li><strong class="text-blue">Tự động cân bằng âm lượng:</strong> AGC bảo toàn giọng nói rõ nét.</li>
-                <li><strong class="text-green">Tính năng lý tưởng:</strong> Dùng cho hội nghị, webinar, học ngoại ngữ.
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Video 3 -->
-        <div class="tab-pane" id="demo3">
-          <div class="showroom-wrapper">
-            <div class="showroom-video">
-              <video class="video-player" controls preload="metadata" poster="./images/Gemini_Generated_Image_ (3).png">
-                <source src="./videos/Demo-project03.mp4" type="video/mp4">
-                Trình duyệt không hỗ trợ phát video này.
-              </video>
-            </div>
-            <div class="showroom-info">
-              <h3>Demo 03: Chống Nhiễu Âm & Sửa Lỗi Chính Tả</h3>
-              <p class="showroom-desc">
-                Trình diễn sức mạnh của mô hình sửa lỗi chính tả Qwen2.5-1.5B-Instruct và bộ lọc tiếng ồn BiquadFilter ở
-                client. Hệ thống tự động phát hiện các từ nói ngọng, đồng âm sai ngữ cảnh và sửa lại chính xác.
-              </p>
-              <ul class="showroom-features">
-                <li><strong class="text-orange">Lọc tạp âm vật lý:</strong> Loại bỏ hum, ù gió dưới 80Hz.</li>
-                <li><strong class="text-blue">Trí tuệ văn cảnh:</strong> Thay thế từ ASR nhận diện sai ("trân thành" ->
-                  "chân thành").</li>
-                <li><strong class="text-green">Fail-safe:</strong> Tự khôi phục văn bản gốc nếu LLM bị quá tải.</li>
-              </ul>
-            </div>
+          <video class="video-player" controls preload="metadata" poster="./images/Gemini_Generated_Image_ (1).png">
+            <source src="./videos/Demo-project.mp4" type="video/mp4">
+            Trình duyệt của bạn không hỗ trợ phát video này.
+          </video>
+          <div class="video-caption-extended">
+            <p><strong>Nội dung demo bao gồm:</strong></p>
+            <ul>
+              <li>Nhận diện giọng nói tiếng Việt siêu tốc qua micro (&lt;100ms) bằng Sherpa-ONNX.</li>
+              <li>Chốt câu và hiệu chỉnh ngữ nghĩa, tự động sửa lỗi phát âm và đồng âm bằng LLM Qwen2.5-1.5B chạy local.</li>
+              <li>Phiên dịch trực tiếp song song sang tiếng Anh và hiển thị Word-Diff chống chớp màn hình.</li>
+            </ul>
           </div>
         </div>
       </div>

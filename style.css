@@ -642,128 +642,48 @@ img, video {
   user-select: none;
 }
 
-/* --- VIDEO SHOWROOM --- */
-.showroom-tabs {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  margin-bottom: 40px;
+/* --- VIDEO SHOWROOM (Demo) --- */
+.single-video-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-.tab-btn {
-  background-color: #ffffff;
-  border: 1px solid var(--color-border);
+.video-caption-extended {
+  padding: 24px 30px;
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--color-border);
+}
+
+.video-caption-extended p {
   font-family: var(--font-title);
-  font-weight: 600;
-  font-size: 14px;
-  padding: 12px 24px;
-  border-radius: var(--radius-sm);
-  cursor: pointer;
-  transition: var(--transition);
-  color: var(--color-text-muted);
-  box-shadow: var(--shadow-sm);
-}
-
-.tab-btn:hover {
-  border-color: var(--color-primary);
-  color: var(--color-primary);
-}
-
-.tab-btn.active {
-  background-color: var(--color-primary);
-  border-color: var(--color-primary);
-  color: #ffffff;
-  box-shadow: 0 4px 14px rgba(15, 44, 89, 0.2);
-}
-
-.showroom-content {
-  position: relative;
-}
-
-.tab-pane {
-  display: none;
-  animation: fadeIn 0.4s ease forwards;
-}
-
-.tab-pane.active {
-  display: block;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.showroom-wrapper {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 40px;
-  background-color: #ffffff;
-  padding: 30px;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-lg);
-  border: 1px solid var(--color-border);
-}
-
-.showroom-video {
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  border: 1px solid var(--color-border);
-  aspect-ratio: 16/9;
-  background-color: #000;
-}
-
-.showroom-video video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.showroom-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.showroom-info h3 {
-  font-family: var(--font-title);
-  font-size: 24px;
   font-weight: 700;
   color: var(--color-primary);
-  margin-bottom: 16px;
-}
-
-.showroom-desc {
+  margin-bottom: 12px;
   font-size: 15px;
-  color: var(--color-text-muted);
-  margin-bottom: 24px;
 }
 
-.showroom-features {
+.video-caption-extended ul {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
 }
 
-.showroom-features li {
+.video-caption-extended li {
   font-size: 14px;
   position: relative;
   padding-left: 20px;
+  color: var(--color-text-muted);
 }
 
-.showroom-features li::before {
+.video-caption-extended li::before {
   content: '✓';
   position: absolute;
   left: 0;
-  top: 0;
+  top: 2px;
   color: var(--color-accent);
   font-weight: 700;
 }
-
-.text-orange { color: var(--color-accent); }
-.text-blue { color: var(--color-primary); }
-.text-green { color: #2b8a3e; }
 
 /* --- GALLERY SECTION (Poster Dự Án) --- */
 .single-poster-wrapper {
